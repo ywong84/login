@@ -1,0 +1,42 @@
+*{
+  margin: 0px;
+  margin: 0px;
+}
+#register {
+  width: 500px;
+  margin: 30px 0px 0px 30px;
+}
+h1 {
+  margin: 0px 0px 20px 0px;
+}
+label{
+  display: block;
+  vertical-align: top;
+  margin: 5px 0px 5px 20px;
+}
+label, input {
+  font-size: 15pt;
+  margin: 0px 0px 15px 0px;
+}
+form {
+  position: relative;
+}
+
+input{
+  position: absolute;
+  left: 40%;
+}
+
+.btn2 {
+  margin: 0px 0px 0px 355px;
+}
+
+#login {
+  width: 500px;
+  margin: 30px 0px 0px 30px;
+}
+
+p {
+  color: red;
+  font-size: 12pt;
+}

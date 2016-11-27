@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success</title>
+  </head>
+  <body>
+    {% if messages %}
+      {% for message in messages %}
+        <p> {{message}} </p>
+        {% endfor %}
+    {% endif %}
+    <h3>Successfully Registered (Login)</h3>
+  </body>
+</html>

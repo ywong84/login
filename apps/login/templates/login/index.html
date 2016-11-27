@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/style.css' %}">
+    <title>Login and Register</title>
+  </head>
+  <body>
+    <div id="register">
+      <label>
+        {% if messages %}
+        {% for message in messages %}
+        <p> {{message}} </p>
+        {% endfor %}
+        {% endif %}
+      <h1>Registration:</h1>
+      <form action="/create" method="post">
+        {% csrf_token %}
+          First Name: <input type="text" name="first_name">
+        </label>
+        <label>
+
+          Last Name: <input type="text" name="last_name">
+        </label>
+        <label>
+
+          Email: <input type="text" name="email">
+        </label>
+
+        <label>
+
+          Password: <input type="password" name="password">
+        </label>
+        <label>
+
+          Confirm PW: <input type="password" name="confirmPassword">
+        </label>
+        <label>
+          <button type="submit" class="btn btn-primary btn2">Register</button>
+        </label>
+      </form>
+    </div>
+    <div id='login'>
+      <h1>Login:</h1>
+      <form action='/login' method='post'>
+        {% csrf_token %}
+        <label>
+          Email: <input type="text" name="email">
+        </label>
+        <label>
+          password: <input type="password" name="password">
+        </label>
+        <label>
+          <button type="submit" class="btn btn-primary btn2">Login</button>
+        </label>
+      </form>
+    </div>
+  </body>
+
+</html>

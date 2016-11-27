@@ -1,0 +1,12 @@
+bcrypt==3.1.1
+cffi==1.9.1
+Django==1.10.3
+get==0.0.0
+post==0.0.0
+public==0.0.0
+pycparser==2.17
+query-string==0.0.0
+request==0.0.0
+requests==2.12.1
+setupfiles==0.0.13
+six==1.10.0
